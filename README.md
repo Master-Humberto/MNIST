@@ -1,5 +1,5 @@
 ### Descrição do Repositório: Classificador MNIST com Rede Neural de 2 Camadas e 128 Neurônios
-🚨 O código de MINST_regularized.ipynb usa cupy, acelerado via GPU. Para fazer o código funcionar você terá de trocar para numpy.
+🚨 O código de MINST_regularized.ipynb usa cupy, acelerado via GPU. Para fazer o código funcionar você terá de trocar para numpy. \
 Este repositório contém uma implementação completa de uma rede neural de duas camadas, projetada para classificar dígitos manuscritos do conjunto de dados MNIST. A rede é composta por uma camada oculta com 128 neurônios e utiliza as funções de ativação ReLU e Softmax. O modelo é treinado usando a técnica de backpropagation com a função de perda de entropia cruzada.
 
 #### Funções Implementadas:
