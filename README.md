@@ -1,23 +1,29 @@
+Aqui está a descrição modificada para o arquivo `MINST_regularized.ipynb`, levando em consideração que ele utiliza a biblioteca `cupy` para aceleração via GPU:
+
+---
+
 ### Descrição do Repositório: Classificador MNIST com Rede Neural de 2 Camadas e 128 Neurônios
-🚨 O código de MINST_regularized.ipynb usa cupy, acelerado via GPU. Para fazer o código funcionar você terá de trocar para numpy. \
-Este repositório contém uma implementação completa de uma rede neural de duas camadas, projetada para classificar dígitos manuscritos do conjunto de dados MNIST. A rede é composta por uma camada oculta com 128 neurônios e utiliza as funções de ativação ReLU e Softmax. O modelo é treinado usando a técnica de backpropagation com a função de perda de entropia cruzada.
+
+🚨 **Nota**: O código em `MINST_regularized.ipynb` está otimizado para execução em GPU utilizando a biblioteca `cupy`. Para executar este código em uma máquina que não possui GPU ou não suporta `cupy`, será necessário modificar o código para utilizar `numpy` em vez de `cupy`.
+
+Este repositório contém uma implementação de uma rede neural de duas camadas projetada para classificar dígitos manuscritos do conjunto de dados MNIST. A rede possui uma camada oculta com 128 neurônios e faz uso das funções de ativação ReLU e Softmax. O modelo é treinado utilizando a técnica de backpropagation com a função de perda de entropia cruzada.
 
 #### Funções Implementadas:
 
 1. **`relu(x)`**:
-   - **Descrição**: Calcula a função de ativação ReLU, que introduz não-linearidade ao modelo. ReLU é definida como max(0, x).
+   - **Descrição**: Computa a função de ativação ReLU, que introduz não-linearidade ao modelo. ReLU é definida como max(0, x).
    - **Parâmetros**:
-     - `x`: Array NumPy com os valores de entrada.
+     - `x`: Array cupy (ou numpy) com os valores de entrada.
 
 2. **`relu_derivative(x)`**:
    - **Descrição**: Calcula a derivada da função ReLU, utilizada no processo de backpropagation.
    - **Parâmetros**:
-     - `x`: Array NumPy com os valores de entrada.
+     - `x`: Array cupy (ou numpy) com os valores de entrada.
 
 3. **`softmax(x)`**:
    - **Descrição**: Aplica a função de ativação Softmax, que é usada na última camada de redes neurais para classificação multiclasse. Essa função normaliza as saídas em uma distribuição de probabilidade.
    - **Parâmetros**:
-     - `x`: Array NumPy com os valores de entrada.
+     - `x`: Array cupy (ou numpy) com os valores de entrada.
 
 4. **`cross_entropy_loss(predictions, targets)`**:
    - **Descrição**: Calcula a perda de entropia cruzada, uma métrica de perda comum para problemas de classificação.
@@ -78,4 +84,8 @@ A seguir está o diagrama da rede neural:
 - **[10]**: Camada de saída com 10 neurônios, um para cada classe de dígito (0-9).
 - **Softmax**: Função de ativação Softmax usada para normalizar as saídas em uma distribuição de probabilidade.
 
-Este repositório oferece uma base sólida para entender e explorar redes neurais aplicadas ao problema clássico de reconhecimento de dígitos escritos à mão.
+Este repositório oferece uma base sólida para entender e explorar redes neurais aplicadas ao problema clássico de reconhecimento de dígitos escritos à mão, com a vantagem de aceleração via GPU usando `cupy`.
+
+--- 
+
+Essa versão ajustada da descrição menciona explicitamente a necessidade de substituir `cupy` por `numpy` caso a GPU não esteja disponível.
